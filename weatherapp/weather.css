@@ -1,0 +1,15 @@
+body, html {
+    height: 100%;
+}
+body {
+    background-image:url("http://i.imgur.com/O5D4yFg.jpg");
+    background-size: cover;
+}
+
+.jumbotron {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    background-color: inherit;
+    width: 65%;
+}
