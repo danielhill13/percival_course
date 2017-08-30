@@ -20,7 +20,9 @@
 
 <?php
 //Take input and query http://www.weather-forecast.com/ with the text search
-
+$urlCity = "http://www.weather-forecast.com/locations/".$_POST['city']."/forecasts/latest";
+print_r($_POST['city']);
+echo('<h2>'.$urlCity.'</h2>');
 //Return the conditions in a box below the form
 
 ?>
