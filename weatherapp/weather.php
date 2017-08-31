@@ -1,5 +1,6 @@
 <?php
 //Take input and query http://www.weather-forecast.com/ with the text search
+$_GET['city'] = str_replace(' ', '', $_GET['city']);
 $urlCity = "http://www.weather-forecast.com/locations/".$_GET['city']."/forecasts/latest";
 if ($_GET['city']) {
     $forecastPage = file_get_contents("$urlCity");
@@ -27,6 +28,7 @@ $weather = $pageArray2[0];
     </div>
 <div id='weather'><?php
 if ($weather){
+    echo('<h4>'.$_GET['city'].'</h4><br>');
     echo('<div class="alert alert-success">'.$weather.'</div>');
 } 
 ?>
