@@ -20,12 +20,15 @@ if (mysqli_connect_error()) {
 // $query = "SELECT * FROM users WHERE id >= 3";
 
 //RETURN just that field
-$query = "SELECT email FROM users";
+// $query = "SELECT email FROM users";
+
+$query = "SELECT * FROM users WHERE name = 'Daniel Hill'";
+
 
 if ($result = mysqli_query($link, $query)) {
     while ($row = mysqli_fetch_array($result)){
+        echo("<br>-");
         print_r($row);
-        echo("<br>");
     }
 }
 
