@@ -23,7 +23,7 @@ if(!$_POST['email']){
         echo($error);
     } else {
     $userEmail = mysqli_real_escape_string($link, $_POST['email']);
-    $userPassword = $_POST['password'];
+    $userPassword = mysqli_real_escape_string($link, $_POST['password']);
     $checkUnique = "SELECT * FROM users where email = '".$userEmail."'";
     $result = mysqli_query($link, $checkUnique);
     if(mysqli_num_rows($result) > 0) {
